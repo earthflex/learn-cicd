@@ -1,20 +1,17 @@
 name: CI/CD Pipeline
 
 on:
-  push:
-    branches:
-      - main
-      - dev
-  pull_request:
-    branches:
-      - main
-
-# Sets permissions for GitHub Pages deployment
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+    push:
+        branches:
+            - main
+    pull_request:
+        branches:
+            - main
 
 jobs:
     build:
         runs-on: ubuntu-lastest
+
+        steps:
+            - name: Say Hello
+                run: echo "Github Action!"
